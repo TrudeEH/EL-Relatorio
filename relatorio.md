@@ -1,34 +1,20 @@
-Curso Profissional “Técnico de Gestão de Equipamentos Informáticos”
-Relatório do Projeto Final
-“Carro controlado remotamente com sistema de segurança”
+**Curso Profissional “Técnico de Gestão de Equipamentos Informáticos”**
+## Relatório do Projeto Final
+# “Carro controlado remotamente com sistema de segurança”
 
-Diretor de Curso / Orientador: João Lopes 
-Formando: José Simões / Henrique Esteves
-Turma: R
-Ano lectivo: 2022/2023
+**Diretor de Curso / Orientador: João Lopes** 
+**Formando: José Simões / Henrique Esteves**
+**Turma: R**
+**Ano lectivo: 2022/2023**
 
-Resumo 
+## Resumo 
 Este relatório tem como objetivo apresentar o resultado do projeto de desenvolvimento de um carro controlado remotamente, desenvolvido por José Simões e Henrique Esteves. Este projeto utiliza um comando IR para controlar  um carro e um sensor  ultrassónico para evitar colisões e acidentes. O projeto foi desenvolvido em duas etapas, sendo que primeiro foi construído um carro sem o sensor ultrassónico e posteriormente, após a conclusão da programação, foi construído outro carro com o sensor ultrassónico. Os carros utilizam baterias recarregáveis (9v e 4*1,5v) para alimentação. A conclusão do projeto foi possível graças ao apoio fundamental do professor  João Lopes.
 
-
-
-
-
-
-
-
-
-
-
-
-
-Introdução
+## Introdução
 Na atualidade, a robótica e a automação estão a desempenhar um papel fundamental nas nossas vidas. Por exemplo, os drones estão a mudar a forma como realizamos tarefas, sejam elas de entrega de pacotes, inspeção de áreas inacessíveis ou até mesmo como ferramenta de entretenimento. A indústria e a saúde também investem na automação para garantir a qualidade e segurança nas suas operações. A integração da robótica na educação é cada vez mais importante, com plataformas como a Raspberry Pi e Arduino, que fornecem recursos para os estudantes aprenderem sobre robótica e programação. Essas plataformas já ajudaram a formar uma nova geração de profissionais, permitindo a criação de inovações como os robôs da Boston Dynamics e outros avanços na robótica.
 
 Figura 1– Exemplos de drones simples.
- 
-
-
+![drones](drone.jpg)
 
 
 A disciplina de Eletrónica fundamental é uma parte crucial do curso profissional "Técnico de Gestão de Equipamentos Informáticos" (GEI). Ela tem como objetivo preparar os estudantes para o mercado de trabalho competitivo, uma vez que existe uma grande procura por profissionais capacitados na área das tecnologias de informação. (O projeto final) de Eletrónica fundamental teve como objetivo permitir que os formandos pudessem aplicar e demonstrar as habilidades adquiridas durante o curso. Além disso, o projeto também teve um aspeto "verde" ao reutilizar material eletrónico que estava parcialmente abandonado. A disciplina contribui para a formação de profissionais capacitados e conscientes da importância da sustentabilidade.
