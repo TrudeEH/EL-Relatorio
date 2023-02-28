@@ -1,18 +1,3 @@
-# Titulo
-## Subtitulo
-### Sub-Subtitulo
-*Italico*
-**Bold**
-__Risco em baixo__
-~~Riscado~~
-
-
-
-
-
-
-
-
 Curso Profissional “Técnico de Gestão de Equipamentos Informáticos”
 Relatório do Projeto Final
 “Carro controlado remotamente com sistema de segurança”
@@ -20,26 +5,8 @@ Relatório do Projeto Final
 Diretor de Curso / Orientador: João Lopes 
 Formando: José Simões / Henrique Esteves
 Turma: R
-Ano lectivo: 2022/2023
-Índice
+Ano lectivo: 2022/2023
 
-Resumo	2
-Introdução	3
-Designação do projeto	4
-Componentes e materiais utilizados	5
-Breve descrição dos componentes utilizados:	6
-Código completo	10
-Dificuldades encontradas na realização do trabalho	11
-Conclusão	12
-
-
-
-
-
-
-
-
-
 Resumo 
 Este relatório tem como objetivo apresentar o resultado do projeto de desenvolvimento de um carro controlado remotamente, desenvolvido por José Simões e Henrique Esteves. Este projeto utiliza um comando IR para controlar  um carro e um sensor  ultrassónico para evitar colisões e acidentes. O projeto foi desenvolvido em duas etapas, sendo que primeiro foi construído um carro sem o sensor ultrassónico e posteriormente, após a conclusão da programação, foi construído outro carro com o sensor ultrassónico. Os carros utilizam baterias recarregáveis (9v e 4*1,5v) para alimentação. A conclusão do projeto foi possível graças ao apoio fundamental do professor  João Lopes.
 
