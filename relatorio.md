@@ -111,17 +111,173 @@ Existem diversos tipos de sensores IR, tais como sensores passivos que são os q
 
 
 
-Segmento de código considerado mais importante
+## Segmento de código considerado mais importante
 Um dos segmentos de código mais importante refere-se à instrução “switch case”, que inicia as funções responsavéis pela movimentação do carro, dependendo do valor descodificado enviado pelo comando.
 
+```c
+void loop(){
+  if (getDistance() < 15 ) {
+    driveBackward(); // Go back
+    delay(500);
+    stop();
+    return; // Exit the loop
+  }
+  if (irrecv.decode()) { 
+    Serial.println(irrecv.decodedIRData.command);
+    if (irrecv.decodedIRData.command == 116) { // Forward
+      Serial.println("Drive Forward");
+      driveForward();
+    }
+    else if (irrecv.decodedIRData.command == 51) { // Right
+      Serial.println("Turn Right");
+      turnRight();
+    }
+    else if (irrecv.decodedIRData.command == 52) { // Left
+      Serial.println("Turn Left");
+      turnLeft();
+    }
+    else if (irrecv.decodedIRData.command == 117) { // Backwards
+      Serial.println("Drive Backward");
+      driveBackward();
+    }
+    else if (irrecv.decodedIRData.command == 101) { // OK
+      stop();
+    }
+    irrecv.resume(); // Receive the next value
+    delay(100);
+  }
+}
+```
+
+## Código completo
+```c
+#include <IRremote.h>
+
+const int RECV_PIN = 13;
+IRrecv irrecv(RECV_PIN);
+decode_results results;
+
+// Pinos dos motores
+const int MOTOR_LEFT_IN_1 = 7;
+const int MOTOR_LEFT_ENABLE = 9;
+const int MOTOR_LEFT_IN_2 = 8;
+const int MOTOR_RIGHT_IN_1 = 4;
+const int MOTOR_RIGHT_ENABLE = 3;
+const int MOTOR_RIGHT_IN_2 = 5;
+
+// Pinos para sonar
+const int TrigPin = 12;
+const int EchoPin = 11;
+
+void setup(){
+  Serial.begin(9600);
+  irrecv.enableIRIn();
+  
+  // Configura os pinos dos motores
+  pinMode(MOTOR_LEFT_IN_1, OUTPUT);
+  pinMode(MOTOR_LEFT_IN_2, OUTPUT);
+  pinMode(MOTOR_RIGHT_IN_1, OUTPUT);
+  pinMode(MOTOR_RIGHT_IN_2, OUTPUT);
+  pinMode(MOTOR_RIGHT_ENABLE, OUTPUT);
+  pinMode(MOTOR_LEFT_ENABLE, OUTPUT);
+  pinMode(TrigPin, OUTPUT);
+  pinMode(EchoPin, INPUT);
+}
+
+void loop(){
+  // Para o carrinho sem sensor, comentar este bloco.
+  if (getDistance() < 15 ) {
+    driveBackward(); // Go back
+    delay(500);
+    stop();
+    return; // Exit the loop
+  }
+  if (irrecv.decode()) { 
+    Serial.println(irrecv.decodedIRData.command);
+    if (irrecv.decodedIRData.command == 116) { // Forward
+      Serial.println("Drive Forward");
+      driveForward();
+    }
+    else if (irrecv.decodedIRData.command == 51) { // Right
+      Serial.println("Turn Right");
+      turnRight();
+    }
+    else if (irrecv.decodedIRData.command == 52) { // Left
+      Serial.println("Turn Left");
+      turnLeft();
+    }
+    else if (irrecv.decodedIRData.command == 117) { // Backwards
+      Serial.println("Drive Backward");
+      driveBackward();
+    }
+    else if (irrecv.decodedIRData.command == 101) { // OK
+      stop();
+    }
+    irrecv.resume(); // Receive the next value
+    delay(100);
+  }
+}
+
+float getDistance() {
+  long duration, distance;
+  digitalWrite(TrigPin, LOW);  // Set Trig pin low for 2 microseconds
+  delayMicroseconds(2);
+  digitalWrite(TrigPin, HIGH); // Set Trig pin high for 10 microseconds
+  delayMicroseconds(10);
+  digitalWrite(TrigPin, LOW);  // Set Trig pin low again
+  duration = pulseIn(EchoPin, HIGH); // Measure the duration of the Echo pulse
+  distance = duration * 0.034 / 2; // Calculate the distance in centimeters
+  return distance;
+}
 
 
+void driveForward() {
+  // Define a velocidade dos motores para frente
+  digitalWrite(MOTOR_LEFT_IN_1, LOW);
+  digitalWrite(MOTOR_LEFT_IN_2, HIGH);
+  digitalWrite(MOTOR_RIGHT_IN_1, LOW);
+  digitalWrite(MOTOR_RIGHT_IN_2, HIGH);
+  digitalWrite(MOTOR_RIGHT_ENABLE, HIGH);
+  digitalWrite(MOTOR_LEFT_ENABLE, HIGH);
+}
 
+void turnRight() {
+  // Define a velocidade do motor esquerdo para frente e a do motor direito para trás
+  digitalWrite(MOTOR_LEFT_IN_1, HIGH);
+  digitalWrite(MOTOR_LEFT_IN_2, LOW);
+  digitalWrite(MOTOR_RIGHT_IN_1, LOW);
+  digitalWrite(MOTOR_RIGHT_IN_2, HIGH);
+  digitalWrite(MOTOR_RIGHT_ENABLE, HIGH);
+  digitalWrite(MOTOR_LEFT_ENABLE, HIGH);
+}
 
+void turnLeft() {
+  // Define a velocidade do motor esquerdo para trás e a do motor direito para frente
+  digitalWrite(MOTOR_LEFT_IN_1, LOW);
+  digitalWrite(MOTOR_LEFT_IN_2, HIGH);
+  digitalWrite(MOTOR_RIGHT_IN_1, HIGH);
+  digitalWrite(MOTOR_RIGHT_IN_2, LOW);
+  digitalWrite(MOTOR_RIGHT_ENABLE, HIGH);
+  digitalWrite(MOTOR_LEFT_ENABLE, HIGH);
+}
 
-Código completo
+void driveBackward() {
+  // Define a velocidade dos motores para trás
+  digitalWrite(MOTOR_LEFT_IN_1, HIGH);
+  digitalWrite(MOTOR_LEFT_IN_2, LOW);
+  digitalWrite(MOTOR_RIGHT_IN_1, HIGH);
+  digitalWrite(MOTOR_RIGHT_IN_2, LOW);
+  digitalWrite(MOTOR_RIGHT_ENABLE, HIGH);
+  digitalWrite(MOTOR_LEFT_ENABLE, HIGH);
+}
 
-
+void stop() {
+  // Define a velocidade dos motores como 0
+  digitalWrite(MOTOR_LEFT_ENABLE, LOW);
+  digitalWrite(MOTOR_RIGHT_ENABLE, LOW);
+  Serial.println("Stopped");
+}
+```
 
 
 
@@ -134,19 +290,7 @@ O material utilizado tinha algumas imperfeições, o que dificultou os testes e 
 Tempo disponível:
 Devido às limitações de tempo foi difícil concluir todos os objetivos que tínhamos em mente, como montar uma placa de circuíto soldada e utilizar apenas uma bateria.
 
-
-
-
-
-
-
-
-
-
-
-
-
-Conclusão
+## Conclusão
 Ao longo deste projeto, tivemos a oportunidade de desenvolver as nossas habilidades em robótica e eletrónica, graças à ajuda valiosa do nosso professor João Lopes. Foi um prazer trabalhar neste projeto e ver a realização do nosso objetivo de construir um carro controlado remotamente com sistema de segurança. Além disso, tivemos a oportunidade de aprender sobre componentes eletrónicos como ponte H, sensores IR e ultrassónicos, bem como sobre programação de microcontroladores com o Arduino Uno e o Nano.
 
 A construção destes carros foi um grande desafio, mas também uma oportunidade incrível para aplicarmos o que aprendemos em sala de aula, e para explorarmos novas áreas de conhecimento. A criação destes veículos também nos permitiu reutilizar material eletrónico parcialmente abandonado, o que é uma realização importante em termos de sustentabilidade.
