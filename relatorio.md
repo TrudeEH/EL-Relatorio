@@ -1,3 +1,7 @@
+<div style="text-align: center;">
+  <img src="esm_174.png" alt="esm">
+</div>
+
 **Curso Profissional “Técnico de Gestão de Equipamentos Informáticos”**
 ## Relatório do Projeto Final
 # “Carro controlado remotamente com sistema de segurança”
@@ -30,8 +34,15 @@ Componentes e materiais utilizados
 
 Tabela 1 – material utilizado
 
-
-
+ Nome do componente | Quantidade | Função do componente |
+| :----: | :------: | ------- |
+| Arduino UNO e Nano |    1     |    Microcontrolador     |
+| Ponte H |    2    |    Controlar o sentido de rotação (RPM) e a velocidade do motor     |
+| Bateria 9V e 6V (1,5v * 4) |     2    |    Fonte de energia     |
+| Recetor IR |     2     |     Controlar remotamente o carro robô (infravermelhos)     |
+| Jumpers |     Vários    |    Permitir a ligação dos componentes     |
+| Breadboard |    2     |     Facilitar a instalação dos vários componentes do projeto    |
+| Sensor Ultrassónico |     1    |    Sistema de segurança     |
 
 
 Breve descrição dos componentes utilizados:
