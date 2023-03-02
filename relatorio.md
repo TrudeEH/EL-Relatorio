@@ -50,7 +50,7 @@ Arduino é uma plataforma de prototipagem eletrónica de código aberto que perm
 
 
 ![arduino](arduino_uno.jpg)
-Figura 4 – Arduino Uno
+Figura 2 – Arduino Uno
 
 ### Ponte H
 Uma ponte H é um circuito eletrónico utilizado para controlar a direção de um motor elétrico. A ponte H é composta por quatro interruptores (normalmente transístores) que podem ser controlados independentemente para mudar a polaridade da corrente elétrica que flui através do motor.
@@ -60,7 +60,7 @@ A ponte H recebe o nome por causa da sua configuração em forma de "H", onde o 
 As pontes H são amplamente utilizadas em robótica e automação, especialmente para controlar motores de corrente contínua (DC) ou motores de passo.
 
 ![Ponte_H](ponte_h.jpg)
-Figura 7 – Esquema de um circuito “Ponte H”
+Figura 3 – Esquema de um circuito “Ponte H”
  
 ### Recetor IR
 O sensor IR é um dispositivo eletrónico que deteta a radiação infravermelha emitida por objetos ou organismos. A radiação infravermelha é um tipo de onda eletromagnética que não é visível a olho nu, mas que é percebida pelo sensor IR. Este tipo de tecnologia é amplamente utilizado em diversas áreas, desde sistemas de segurança, automação industrial, controlo remoto de aparelhos eletrónicos, até à medicina.
