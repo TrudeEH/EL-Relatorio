@@ -31,8 +31,6 @@ Figura 3 - Primeiro protótipo com sensor ultrassónico
 
 Componentes e materiais utilizados
 
-Tabela 1 – material utilizado
-
  Nome do componente | Quantidade | Função do componente |
 | :----: | :------: | :-------: |
 | Arduino UNO e Nano |    1     |    Microcontrolador     |
@@ -42,7 +40,7 @@ Tabela 1 – material utilizado
 | Jumpers |     Vários    |    Permitir a ligação dos componentes     |
 | Breadboard |    2     |     Facilitar a instalação dos vários componentes do projeto    |
 | Sensor Ultrassónico |     1    |    Sistema de segurança     |
-
+Tabela 1 – material utilizado
 
 ## Breve descrição dos componentes utilizados:
 Neste ponto serão descritos de forma resumida alguns dos componentes mais importantes deste projeto.
