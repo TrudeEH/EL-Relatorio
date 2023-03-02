@@ -27,29 +27,34 @@ O projeto "Carro controlado remotamente com sistema de segurança" foi concluíd
 O primeiro carro foi construído utilizando um Arduino Uno, enquanto que o segundo carro foi construído utilizando um Arduino Nano. O objetivo desta escolha foi reutilizar o material eletrónico que estava parcialmente abandonado e colocá-lo em bom uso. A escolha do Arduino Nano permitiu uma construção mais compacta e eficiente.
 Os sensores IR e ultrassónico foram programados para trabalhar em conjunto para evitar colisões e acidentes. O carro era capaz de detectar obstáculos à sua frente e mudar de direção para evitá-los, garantindo a segurança da sua operação.
 
-![carros](dois_carros.jpeg)
-Figura 2 - Protótipos dos carros telecomandados com sensor IR e ultrassónico
+<div style="display: grid; column-gap: 20px; row-gap: 20px;">
+  <div style="grid-column: 1; grid-row: 1;">
+    <img src="dois_carros.jpeg" alt="esm">
+  </div>
+  <div style="grid-column: 2; grid-row: 1;">
+    <img src="carro_IR.jpeg" alt="esm">
+  </div>
+    <div style="grid-column: 1; grid-row: 2;">
+    <img src="carro_ultra.jpeg" alt="esm">
+  </div>
+    <div style="grid-column: 2; grid-row: 2;">
+    <img src="carro_ulltra_tras.jpeg" alt="esm">
+  </div>
+</div>
 
-![carros](carro_IR.jpeg)
-Figura 3 - Carro com sensor IR
+**Figura 2, 3, 4 e 5** - Protótipos de carro telecomandado com sensor IR e/ou ultrassónico.
 
-![carros](carro_ultra.jpeg)
-Figura 4 - Carro com sensor IR e ultrassónico
+### Componentes e materiais utilizados
 
-![carros](carro_ulltra_tras.jpeg)
-Figura 5 - Carro com sensor IR e ultrassónico, parte de trás
-
-Componentes e materiais utilizados
-
- Nome do componente | Quantidade | Função do componente |
-| :----: | :------: | :-------: |
-| Arduino UNO e Nano |    1     |    Microcontrolador     |
-| Ponte H |    2    |    Controlar o sentido de rotação (RPM) e a velocidade do motor     |
-| Bateria 9V e 6V (1,5v * 4) |     2    |    Fonte de energia     |
-| Recetor IR |     2     |     Controlar remotamente o carro robô (infravermelhos)     |
-| Jumpers |     Vários    |    Permitir a ligação dos componentes     |
-| Breadboard |    2     |     Facilitar a instalação dos vários componentes do projeto    |
-| Sensor Ultrassónico |     1    |    Sistema de segurança     |
+ |     Nome do componente     | Quantidade |                     Função do componente                     |
+ | :------------------------: | :--------: | :----------------------------------------------------------: |
+ |     Arduino UNO e Nano     |     1      |                       Microcontrolador                       |
+ |         L293D (CI)         |     2      | Controlar o sentido de rotação (RPM) e a velocidade do motor |
+ | Bateria 9V e 6V (1,5v * 4) |     2      |                       Fonte de energia                       |
+ |         Recetor IR         |     2      |     Controlar remotamente o carro robô (infravermelhos)      |
+ |          Jumpers           |   Vários   |              Permitir a ligação dos componentes              |
+ |         Breadboard         |     2      |   Facilitar a instalação dos vários componentes do projeto   |
+ |    Sensor Ultrassónico     |     1      |                     Sistema de segurança                     |
 Tabela 1 – material utilizado
 
 ## Breve descrição dos componentes utilizados:
@@ -257,7 +262,7 @@ void stop() {
 
 
 
-Dificuldades encontradas na realização do trabalho
+## Dificuldades encontradas na realização do trabalho
 Algumas das dificuldades encontradas na execução deste projeto são referidas de modo abreviado.
 Deficiências no material utilizado:
 O material utilizado tinha algumas imperfeições, o que dificultou os testes e otimização do trabalho.
