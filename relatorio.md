@@ -27,7 +27,17 @@ O projeto "Carro controlado remotamente com sistema de segurança" foi concluíd
 O primeiro carro foi construído utilizando um Arduino Uno, enquanto que o segundo carro foi construído utilizando um Arduino Nano. O objetivo desta escolha foi reutilizar o material eletrónico que estava parcialmente abandonado e colocá-lo em bom uso. A escolha do Arduino Nano permitiu uma construção mais compacta e eficiente.
 Os sensores IR e ultrassónico foram programados para trabalhar em conjunto para evitar colisões e acidentes. O carro era capaz de detectar obstáculos à sua frente e mudar de direção para evitá-los, garantindo a segurança da sua operação.
 
-Figura 2 - Primeiro protótipo com sensor ultrassónico
+![carros](dois_carros.jpeg)
+Figura 2 - Protótipos dos carros telecomandados com sensor IR e ultrassónico
+
+![carros](carro_IR.jpeg)
+Figura 3 - Carro com sensor IR
+
+![carros](carro_ultra.jpeg)
+Figura 4 - Carro com sensor IR e ultrassónico
+
+![carros](carro_ulltra_tras.jpeg)
+Figura 5 - Carro com sensor IR e ultrassónico, parte de trás
 
 Componentes e materiais utilizados
 
@@ -50,7 +60,7 @@ Arduino é uma plataforma de prototipagem eletrónica de código aberto que perm
 
 
 ![arduino](arduino_uno.jpg)
-Figura 3 – Arduino Uno
+Figura 6 – Arduino Uno
 
 ### Ponte H
 Uma ponte H é um circuito eletrónico utilizado para controlar a direção de um motor elétrico. A ponte H é composta por quatro interruptores (normalmente transístores) que podem ser controlados independentemente para mudar a polaridade da corrente elétrica que flui através do motor.
@@ -60,7 +70,7 @@ A ponte H recebe o nome por causa da sua configuração em forma de "H", onde o 
 As pontes H são amplamente utilizadas em robótica e automação, especialmente para controlar motores de corrente contínua (DC) ou motores de passo.
 
 ![Ponte_H](ponte_h.jpg)
-Figura 4 – Esquema de um circuito “Ponte H”
+Figura 7 – Esquema de um circuito “Ponte H”
  
 ### Recetor IR
 O sensor IR é um dispositivo eletrónico que deteta a radiação infravermelha emitida por objetos ou organismos. A radiação infravermelha é um tipo de onda eletromagnética que não é visível a olho nu, mas que é percebida pelo sensor IR. Este tipo de tecnologia é amplamente utilizado em diversas áreas, desde sistemas de segurança, automação industrial, controlo remoto de aparelhos eletrónicos, até à medicina.
